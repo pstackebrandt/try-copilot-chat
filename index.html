@@ -13,14 +13,7 @@
     <h1>Hello World</h1>
     <button type="button" id="nameButton">Enter your name</button>
 
-    <script>
-        function addNameButtonListener() {
-            const nameButton = document.getElementById("nameButton");
-            nameButton.addEventListener("click", () => {
-                const firstName = prompt("What is your first name?");
-                localStorage.setItem("firstName", firstName);
-            });
-        }
+    <script>    
         addNameButtonListener();
     </script>
 </body>
