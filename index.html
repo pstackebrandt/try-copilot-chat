@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>try copilot chat</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='script.js'></script>
 </head>
 
 <body>
     <h1>Hello World</h1>
-    <button id="nameButton">Enter your name</button>
+    <button type="button" id="nameButton">Enter your name</button>
+
     <script>
-        const nameButton = document.getElementById("nameButton");
-        nameButton.addEventListener("click", () => {
-            const firstName = prompt("What is your first name?");
-            localStorage.setItem("firstName", firstName);
-        });
+        function addNameButtonListener() {
+            const nameButton = document.getElementById("nameButton");
+            nameButton.addEventListener("click", () => {
+                const firstName = prompt("What is your first name?");
+                localStorage.setItem("firstName", firstName);
+            });
+        }
+        addNameButtonListener();
     </script>
-    localStorage.setItem("firstName", firstName);
-    </script>
+</body>
+
+</html>
