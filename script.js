@@ -1,7 +1,1 @@
-function addNameButtonListener() {
-    const nameButton = document.getElementById("nameButton");
-    nameButton.addEventListener("click", () => {
-        const firstName = prompt("What is your first name?");
-        localStorage.setItem("firstName", firstName);
-    });
-}
+// Copilot chat seems currently unable to use a script file when the focus is on index.html.

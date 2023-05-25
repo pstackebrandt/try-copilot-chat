@@ -10,11 +10,45 @@
 </head>
 
 <body>
-    <h1>Hello World</h1>
+    <h1>Hello <span id="userName">User</span>!</h1>
+    
     <button type="button" id="nameButton">Enter your name</button>
 
-    <script>    
-        addNameButtonListener();
+    <!-- Copilot chat seems currently unable to use a script file when the focus is on index.html. 
+        So we use js here.-->
+    <script>
+        window.addEventListener("load", () => {
+            addNameButtonListener();
+        });
+
+        /**
+         * Adds a listener to name button click.
+         */
+        function addNameButtonListener() {
+            const nameButton = document.getElementById("nameButton");
+            nameButton.addEventListener("click", () => {
+                askForUserName();
+            });
+        }
+
+        /**
+         * Asks the user for their name and updates the user name element.
+         */
+        function askForUserName() {
+            const name = prompt("Please enter your name:");
+            updateUserName(name);
+        }
+
+        /**
+         * Updates the user name element with the given name.
+         * @param {string} name - The name to update the user name element with.
+         */
+        function updateUserName(name) {
+            const userNameElement = document.getElementById("userName");
+            if (name) {
+                userNameElement.textContent = name;
+            }
+        }
     </script>
 </body>
 
